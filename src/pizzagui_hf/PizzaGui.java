@@ -336,9 +336,8 @@ public class PizzaGui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-//tesztverzió
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JOptionPane.showMessageDialog(rootPane, "Tesztverzió", "Cím:", 2);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
