@@ -400,18 +400,17 @@ public class PizzaGui extends javax.swing.JFrame {
         String cim = jTextField3.getText();
         String jLabelText = jLabel11.getText();
         String jTextFieldText = jTextField2.getText();
-        if (buttonGroup1.getSelection() == null) {
-            JOptionPane.showMessageDialog(rootPane, "Hiba nincs pizza kiválasztva", "HIBA!", JOptionPane.ERROR_MESSAGE);
-        } else {
-
-            if (jLabelText.equals(jTextFieldText)) {
-                JOptionPane.showMessageDialog(this, "A két telefonszám megegyezik", "HIBA!", JOptionPane.INFORMATION_MESSAGE);
-            }
-            if (nev.isEmpty() || cim.isEmpty()) {
-                // Itt nincs teendő, mert valamelyik mező üres
+        if (!jLabelText.equals(jTextFieldText)) {
+            if (buttonGroup1.getSelection() == null) {
+                JOptionPane.showMessageDialog(rootPane, "Hiba nincs pizza kiválasztva", "HIBA!", JOptionPane.ERROR_MESSAGE);
             } else {
-                JOptionPane.showMessageDialog(rootPane, "Köszi a rendelésért " + nev + " hamarosan érkezik a " + cim + " címre");
+                if (nev.isEmpty() || cim.isEmpty()) {
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Köszi a rendelésért " + nev + " hamarosan érkezik a " + cim + " címre");
+                }
             }
+        } else {
+            JOptionPane.showMessageDialog(this, "A két telefonszám megegyezik", "HIBA!", JOptionPane.INFORMATION_MESSAGE);
         }
 
 
